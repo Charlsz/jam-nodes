@@ -48,6 +48,11 @@ export type FilterOutput = z.infer<typeof FilterOutputSchema>;
  * Resolve a nested path on an object
  */
 function resolvePath(obj: unknown, path: string): unknown {
+  // Empty path means use the item itself
+  if (!path) {
+    return obj;
+  }
+
   const parts = path.split('.');
   let current: unknown = obj;
 
