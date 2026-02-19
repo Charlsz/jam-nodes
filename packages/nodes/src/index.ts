@@ -56,12 +56,17 @@ export {
   HttpRequestInputSchema,
   HttpRequestOutputSchema,
   HttpMethodSchema,
+  breadNode,
+  BreadInputSchema,
+  BreadOutputSchema,
 } from './examples/index.js';
 
 export type {
   HttpRequestInput,
   HttpRequestOutput,
   HttpMethod,
+  BreadInput,
+  BreadOutput,
 } from './examples/index.js';
 
 // Integration nodes
@@ -147,7 +152,7 @@ import { conditionalNode } from './logic/index.js';
 import { endNode } from './logic/index.js';
 import { delayNode } from './logic/index.js';
 import { mapNode, filterNode, sortNode } from './transform/index.js';
-import { httpRequestNode } from './examples/index.js';
+import { httpRequestNode, breadNode } from './examples/index.js';
 import {
   redditMonitorNode,
   twitterMonitorNode,
@@ -177,6 +182,7 @@ export const builtInNodes = [
   sortNode,
   // Examples
   httpRequestNode,
+  breadNode,
   // Integrations
   redditMonitorNode,
   twitterMonitorNode,
