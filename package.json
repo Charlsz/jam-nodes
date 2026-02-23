@@ -11,7 +11,10 @@
     "test": "tsx test.ts",
     "lint": "npm run lint --workspaces --if-present",
     "clean": "npm run clean --workspaces --if-present",
-    "typecheck": "npm run typecheck --workspaces --if-present"
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "playground": "npm run dev --workspace=@jam-nodes/playground",
+    "playground:cli": "tsx packages/playground/src/index.ts",
+    "playground:web": "npm run dev --workspace=@jam-nodes/playground-web"
   },
   "repository": {
     "type": "git",
